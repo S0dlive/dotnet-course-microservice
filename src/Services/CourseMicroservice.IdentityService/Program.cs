@@ -13,11 +13,16 @@ builder.Services.AddIdentityServer().AddDeveloperSigningCredential()
     .AddInMemoryApiScopes(Config.ApiScopes)
     .AddTestUsers(Config.Users);
 
+builder.Services.AddControllersWithViews();
+
 var app = builder.Build();
 
-
-app.UseIdentityServer();
-
-
+app.UseStaticFiles();
 app.UseRouting();
+app.UseIdentityServer();
+app.UseAuthorization();
+
+app.UseEndpoints(endpoints => endpoints.MapDefaultControllerRoute());
+
+
 app.Run();

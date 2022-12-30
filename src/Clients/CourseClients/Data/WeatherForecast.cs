@@ -1,4 +1,4 @@
-namespace CourseMicroservice.CourseService;
+namespace CourseClients.Data;
 
 public class WeatherForecast
 {

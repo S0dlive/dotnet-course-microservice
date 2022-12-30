@@ -100,10 +100,11 @@ namespace CourseMicroservice.IdentityService;
           ClientId = "m2m.client",
           ClientName = "Client Credentials Client",
 
-          AllowedGrantTypes = GrantTypes.ClientCredentials,
+          AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+          
           ClientSecrets = {new Secret("SuperSecretPassword".Sha256())},
 
-          AllowedScopes = {"weatherapi.read", "weatherapi.write"}
+          AllowedScopes = {"weatherapi.read", "weatherapi.write", "openid", "profile"}
         },
 
         // interactive client using code flow + pkce
@@ -114,9 +115,10 @@ namespace CourseMicroservice.IdentityService;
 
           AllowedGrantTypes = GrantTypes.Code,
 
-          RedirectUris = {"https://localhost:5444/signin-oidc"},
-          FrontChannelLogoutUri = "https://localhost:5444/signout-oidc",
-          PostLogoutRedirectUris = {"https://localhost:5444/signout-callback-oidc"},
+          RedirectUris = {
+            "https://localhost:5444/signin-oidc", "https://localhost:44398/signin-oidc"},
+          FrontChannelLogoutUri = "https://localhost:7148/signout-oidc",
+          PostLogoutRedirectUris = {"https://localhost:7148/signout-callback-oidc"},
 
           AllowOfflineAccess = true,
           AllowedScopes = {"openid", "profile", "weatherapi.read"},
