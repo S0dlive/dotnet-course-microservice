@@ -12,7 +12,7 @@ public class CourseModel
     public uint ViewNumber { get; set; }
 }
 
-public class Comments
+public class Comment
 {
     public string CourseId { get; set; }
     public Guid CommentId { get; set; }
