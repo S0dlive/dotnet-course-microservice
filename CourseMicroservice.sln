@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{80298C9A-EB45-434A-81B5-21DEC1D3247A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{ACFB6418-B134-46DA-9EE9-828913067E17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{930DEB28-C5FC-46FD-8EE8-FC847B1875B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{6D58A742-B26A-4746-AE58-DA09915B249D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseMicroservice.IdentityService", "src\Services\CourseMicroservice.IdentityService\CourseMicroservice.IdentityService.csproj", "{9833A615-C0A6-464B-896C-BFCD1C1ECA3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseMicroservice.CourseService", "src\Services\CourseMicroservice.CourseService\CourseMicroservice.CourseService.csproj", "{7CECA04F-C17E-4674-829E-29A8EFC23CF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcClient", "src\Clients\MvcClient\MvcClient.csproj", "{F0A131EE-1F0A-4681-AEFF-A2F20CBBC6D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ACFB6418-B134-46DA-9EE9-828913067E17} = {80298C9A-EB45-434A-81B5-21DEC1D3247A}
+		{930DEB28-C5FC-46FD-8EE8-FC847B1875B7} = {80298C9A-EB45-434A-81B5-21DEC1D3247A}
+		{6D58A742-B26A-4746-AE58-DA09915B249D} = {80298C9A-EB45-434A-81B5-21DEC1D3247A}
+		{9833A615-C0A6-464B-896C-BFCD1C1ECA3B} = {ACFB6418-B134-46DA-9EE9-828913067E17}
+		{7CECA04F-C17E-4674-829E-29A8EFC23CF5} = {ACFB6418-B134-46DA-9EE9-828913067E17}
+		{F0A131EE-1F0A-4681-AEFF-A2F20CBBC6D1} = {6D58A742-B26A-4746-AE58-DA09915B249D}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9833A615-C0A6-464B-896C-BFCD1C1ECA3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9833A615-C0A6-464B-896C-BFCD1C1ECA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9833A615-C0A6-464B-896C-BFCD1C1ECA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9833A615-C0A6-464B-896C-BFCD1C1ECA3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CECA04F-C17E-4674-829E-29A8EFC23CF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CECA04F-C17E-4674-829E-29A8EFC23CF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CECA04F-C17E-4674-829E-29A8EFC23CF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CECA04F-C17E-4674-829E-29A8EFC23CF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0A131EE-1F0A-4681-AEFF-A2F20CBBC6D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0A131EE-1F0A-4681-AEFF-A2F20CBBC6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0A131EE-1F0A-4681-AEFF-A2F20CBBC6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0A131EE-1F0A-4681-AEFF-A2F20CBBC6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
