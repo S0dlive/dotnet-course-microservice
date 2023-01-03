@@ -126,5 +126,22 @@ namespace CourseMicroservice.IdentityService;
           RequireConsent = true,
           AllowPlainTextPkce = false
         },
+        new Client
+        {
+          ClientId = "postman",
+          ClientSecrets = {new Secret("SuperSecretPassword".Sha256())},
+
+          AllowedGrantTypes = GrantTypes.Code,
+          RedirectUris = {
+            "https://localhost:5444/signin-oidc", "https://oauth.pstmn.io/v1/callback"},
+          FrontChannelLogoutUri = "https://localhost:7148/signout-oidc",
+          PostLogoutRedirectUris = {"https://localhost:7148/signout-callback-oidc"},
+
+          AllowOfflineAccess = true,
+          AllowedScopes = {"openid", "profile", "course.read"},
+          RequirePkce = true,
+          RequireConsent = true,
+          AllowPlainTextPkce = false
+        },
       };
   }

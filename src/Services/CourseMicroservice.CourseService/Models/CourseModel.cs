@@ -12,6 +12,8 @@ public class CourseModel
     public uint ViewNumber { get; set; }
 }
 
+public record CreateCourse(string Name, string Description, string Content);
+
 public class Comment
 {
     public string CourseId { get; set; }
