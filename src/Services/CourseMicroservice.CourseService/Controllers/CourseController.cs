@@ -47,8 +47,6 @@ public class CourseController : Controller
         //Db.Courses.UpdateOne(t => t.Id.ToString() == courseId, result);
         return Ok(result);
     }
-    
-    
 
     [HttpPost]
     [Authorize("course.create")]
