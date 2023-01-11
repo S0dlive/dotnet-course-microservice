@@ -78,16 +78,16 @@ namespace CourseMicroservice.IdentityService;
     public static IEnumerable<ApiScope> ApiScopes =>
       new []
       {
-        new ApiScope("weatherapi.read"),
-        new ApiScope("weatherapi.write"),
+        new ApiScope("course.read"),
+        new ApiScope("course.create"),
       };
     public static IEnumerable<ApiResource> ApiResources => new[]
     {
-      new ApiResource("weatherapi")
+      new ApiResource("course")
       {
-        Scopes = new List<string> {"weatherapi.read", "weatherapi.write"},
+        Scopes = new List<string> {"course.read", "course.create"},
         ApiSecrets = new List<Secret> {new Secret("ScopeSecret".Sha256())},
-        UserClaims = new List<string> {"role"}
+        UserClaims = new List<string> {"sub", "email"}
       }
     };
 
@@ -116,13 +116,30 @@ namespace CourseMicroservice.IdentityService;
           AllowedGrantTypes = GrantTypes.Code,
 
           RedirectUris = {
-            "https://localhost:5444/signin-oidc", "https://localhost:44398/signin-oidc"},
+            "https://localhost:5444/signin-oidc", "https://localhost:44398/signin-oidc", "https://oauth.pstmn.io/v1/callback"},
+          FrontChannelLogoutUri = "https://localhost:7148/signout-oidc",
+          PostLogoutRedirectUris = {"https://localhost:7148/signout-callback-oidc"},
+          
+          AllowOfflineAccess = true,
+          AllowedScopes = {"openid", "profile", "weatherapi.read"},
+          RequirePkce = false,
+          RequireConsent = true,
+          AllowPlainTextPkce = false
+        },
+        new Client
+        {
+          ClientId = "postman",
+          ClientSecrets = {new Secret("SuperSecretPassword".Sha256())},
+
+          AllowedGrantTypes = GrantTypes.Code,
+          RedirectUris = {
+            "https://localhost:5444/signin-oidc", "https://oauth.pstmn.io/v1/callback"},
           FrontChannelLogoutUri = "https://localhost:7148/signout-oidc",
           PostLogoutRedirectUris = {"https://localhost:7148/signout-callback-oidc"},
 
           AllowOfflineAccess = true,
-          AllowedScopes = {"openid", "profile", "weatherapi.read"},
-          RequirePkce = true,
+          AllowedScopes = {"openid", "profile", "course.read", "course.create"},
+          RequirePkce = false,
           RequireConsent = true,
           AllowPlainTextPkce = false
         },

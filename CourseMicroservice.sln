@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseMicroservice.CourseSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcClient", "src\Clients\MvcClient\MvcClient.csproj", "{F0A131EE-1F0A-4681-AEFF-A2F20CBBC6D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseMivroservice.CatalogService", "src\Services\CourseMivroservice.CatalogService\CourseMivroservice.CatalogService.csproj", "{8C5C5960-C316-4ED2-AEE7-140BABE482C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseMicroservice.ApiGateway", "src\CourseMicroservice.ApiGateway\CourseMicroservice.ApiGateway.csproj", "{4046845E-542F-4B27-9469-935182EF5892}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,8 @@ Global
 		{9833A615-C0A6-464B-896C-BFCD1C1ECA3B} = {ACFB6418-B134-46DA-9EE9-828913067E17}
 		{7CECA04F-C17E-4674-829E-29A8EFC23CF5} = {ACFB6418-B134-46DA-9EE9-828913067E17}
 		{F0A131EE-1F0A-4681-AEFF-A2F20CBBC6D1} = {6D58A742-B26A-4746-AE58-DA09915B249D}
+		{8C5C5960-C316-4ED2-AEE7-140BABE482C2} = {ACFB6418-B134-46DA-9EE9-828913067E17}
+		{4046845E-542F-4B27-9469-935182EF5892} = {930DEB28-C5FC-46FD-8EE8-FC847B1875B7}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9833A615-C0A6-464B-896C-BFCD1C1ECA3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,5 +46,13 @@ Global
 		{F0A131EE-1F0A-4681-AEFF-A2F20CBBC6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0A131EE-1F0A-4681-AEFF-A2F20CBBC6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0A131EE-1F0A-4681-AEFF-A2F20CBBC6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C5C5960-C316-4ED2-AEE7-140BABE482C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C5C5960-C316-4ED2-AEE7-140BABE482C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C5C5960-C316-4ED2-AEE7-140BABE482C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C5C5960-C316-4ED2-AEE7-140BABE482C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4046845E-542F-4B27-9469-935182EF5892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4046845E-542F-4B27-9469-935182EF5892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4046845E-542F-4B27-9469-935182EF5892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4046845E-542F-4B27-9469-935182EF5892}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
